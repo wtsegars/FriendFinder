@@ -23,9 +23,11 @@ module.exports = function(app, path) {
             let closestMatch = 0;
             let matchScore = 999999999999999;
 
+            if (err) throw err; 
             for (let i = 0; i < friendFile.length; i++) {
                 let spaceBetween = 0;
                 for (let j = 0; j < friendFile[i]['answers[]'].length; j++) {
+                    console.log(req.body['answers[]'][j]);
                     spaceBetween += Math.abs((parseInt(req.body['answers[]'][j]) - parseInt(friendFile[i]['answers[]'][j])));
                 }
                 if (spaceBetween <= matchScore) {
