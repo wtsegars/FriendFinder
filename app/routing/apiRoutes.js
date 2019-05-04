@@ -18,7 +18,7 @@ module.exports = function(app, path) {
         const postResponse = JSON.stringify(req.body);
 
         fs.readFile('app/data/friends.js', function (err, data) {
-            const friendFile = JSON.parse(data);
+            let friendFile = JSON.parse(data);
 
             let closestMatch = 0;
             let matchScore = 999999999999999;
