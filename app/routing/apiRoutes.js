@@ -18,18 +18,20 @@ module.exports = function(app, path) {
         const postResponse = JSON.stringify(req.body);
 
         fs.readFile('app/data/friends.js', function (err, data) {
-            let friendFile = JSON.parse(data);
+            if (err) throw err; 
 
+            let friendFile = JSON.parse(data);
+            console.log(friendFile[0].answers);
             let closestMatch = 0;
             let matchScore = 999999999999999;
 
-            if (err) throw err; 
             for (let i = 0; i < friendFile.length; i++) {
+                console.log(friendFile.length);
                 let spaceBetween = 0;
-                for (let j = 0; j < friendFile[i]['answers[]'].length; j++) {
+                for (let j = 0; j < friendFile[i].answers.length; j++) {
                     // ['answers[]'][j]
-                    console.log(req.body);
-                    spaceBetween += Math.abs((parseInt(req.body['answers[]'][j]) - parseInt(friendFile[i]['answers[]'][j])));
+                    console.log(req.body.answers[j]);
+                    spaceBetween += Math.abs((parseInt(req.body.answers[j]) - parseInt(friendFile[i].answers[j])));
                 }
                 if (spaceBetween <= matchScore) {
                     matchScore = spaceBetween;
@@ -41,7 +43,12 @@ module.exports = function(app, path) {
 
             friendFile.push(JSON.parse(postResponse));
 
-            fs.writeFile("app/data/friends.js", JSON.stringify(friendFile));
+            let callBack = function(err) {
+                if (err) throw err;
+                 console.log('The file has been saved!');
+            };
+
+            fs.writeFile("app/data/friends.js", JSON.stringify(friendFile), callBack);
                 res.send(results[0]);
         })
     })

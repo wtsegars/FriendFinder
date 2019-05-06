@@ -38,6 +38,22 @@ for (let i = 0; i < 1; i++) {
 
 $('#surveyLocation').append('<button type="submit" class="btn btn-primary" id="submitButton">Submit</button>');
 
+const config = {
+	".chosen-select": {},
+	".chosen-select-deselect": {
+		allow_single_deselect: true
+	},
+	".chosen-select-no-single": {
+		disable_search_threshold: 10
+	},
+	".chosen-select-no-results": {
+		no_results_text: "Oops, nothing found!"
+	},
+	".chosen-select-width": {
+		width: "95%"
+	}
+};
+
 $('#submitButton').on("click", function(event) {
     event.preventDefault();
 
@@ -54,7 +70,7 @@ $('#submitButton').on("click", function(event) {
             valid == false;
         }
 
-        $('.form-check-option').each( function() {
+        $('.choosen-select').each( function() {
             if ($(this).val() === "") {
                 valid == false;
             }
@@ -69,17 +85,17 @@ $('#submitButton').on("click", function(event) {
             "name": $("#name").val().trim(),
             "photo": $("#image").val().trim(),
             "answers": [
-                $("#1").val(),
-                $("#2").val(),
-                $("#3").val(),
-                $("#4").val(),
-                $("#5").val(),
-                $("#6").val(),
-                $("#7").val(),
-                $("#8").val(),
-                $("#9").val(),
-                $("#10").val(),
-                $("#11").val(),
+                parseInt($("#1").val()),
+                parseInt($("#2").val()),
+                parseInt($("#3").val()),
+                parseInt($("#4").val()),
+                parseInt($("#5").val()),
+                parseInt($("#6").val()),
+                parseInt($("#7").val()),
+                parseInt($("#8").val()),
+                parseInt($("#9").val()),
+                parseInt($("#10").val()),
+                parseInt($("#11").val()),
 
             ]
         };
