@@ -27,7 +27,8 @@ module.exports = function(app, path) {
             for (let i = 0; i < friendFile.length; i++) {
                 let spaceBetween = 0;
                 for (let j = 0; j < friendFile[i]['answers[]'].length; j++) {
-                    console.log(req.body['answers[]'][j]);
+                    // ['answers[]'][j]
+                    console.log(req.body);
                     spaceBetween += Math.abs((parseInt(req.body['answers[]'][j]) - parseInt(friendFile[i]['answers[]'][j])));
                 }
                 if (spaceBetween <= matchScore) {

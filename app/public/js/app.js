@@ -24,15 +24,15 @@ const questions = surveyQuestions1();
 const altQuestions = surveyQuestions2();
 
 for (let i = 0; i < questions.length; i++) {
-    $('#surveyLocation').append('<h3>' + (i+1) + '</h3>' + '<h4>' + questions[i] + '</h4>' + '<div class="form-check">' + '<input class="form-check-input radio-button" type="radio" value="option1" id=' + (i+1) + '>' + '<label class="form-check-label" for=' + (i+1) +'>1</label></div><div class="form-check"><input class="form-check-input radio-button" type="radio" value="option2" id='+ (i+1) + '>' + '<label class="form-check-label" for=' + (i+1) +'>2</label></div><div class="form-check"><input class="form-check-input radio-button" type="radio" value="option3" id='+ (i+1) + '>' + '<label class="form-check-label" for=' + (i+1) +'>3</label></div><div class="form-check"><input class="form-check-input radio-button" type="radio" value="option4" id='+ (i+1) + '>' + '<label class="form-check-label" for=' + (i+1) +'>4</label></div><div class="form-check"><input class="form-check-input radio-button" type="radio" value="option5" id='+ (i+1) + '>' + '<label class="form-check-label" for=' + (i+1) +'>5</label></div>');
+    $('#surveyLocation').append('<h3>' + (i+1) + '</h3>' + '<h4>' + questions[i] + '</h4>' + '<select class="choosen-select" id=' + (i+1) + '>' + '<option class="form-check-option radio-button" type="radio" value="1">1</option>' + '<option class="form-check-option radio-button" type="radio" value="2">2</option>' + '<option class="form-check-option radio-button" type="radio" value="3">3</option>' + '<option class="form-check-option radio-button" type="radio" value="4">4</option>' + '<option class="form-check-option radio-button" type="radio" value="5">5</option>' + '</select>');
 };
 
 for (let i = 0; i < 1; i++) {
     
-        //$('#surveyLocation').append('<h3>' + (i+11) + '</h3>' + '<h4>' + altQuestions[0] + '</h4>' + '<div class="form-check"><input class="form-check-input radio-button" type="radio" value="option1" id=' + (i+11) + '>' + '<label class="form-check-label" for=' + (i+11) + '><img src="images/veryhappy.jpg></label></div><div class="form-check"><input class="form-check-input radio-button" type="radio" value="option2" id=' + (i+11) + '>' + '<label class="form-check-label" for=' + (i+11) + '><img src="images/happy.jpg></label></div><div class="form-check"><input class="form-check-input radio-button" type="radio" value="option3" id=' + (i+11) + '>' + '<label class="form-check-label" for=' + (i+11) + '><img src="images/normal.jpg></label></div><div class="form-check"><input class="form-check-input radio-button" type="radio" value="option4" id=' + (i+11) + '>' + '<label class="form-check-label" for=' + (i+11) + '><img src="images/sad.jpg></label></div><div class="form-check"><input class="form-check-input radio-button" type="radio" value="option5" id=' + (i+11) + '>' + '<label class="form-check-label" for=' + (i+11) + '><img src="images/verysad.jpg></label>' + '</div>');
+        //$('#surveyLocation').append('<h3>' + (i+11) + '</h3>' + '<h4>' + altQuestions[0] + '</h4>' + '<div class="form-check"><option class="form-check-option radio-button" type="radio" value="option1" id=' + (i+11) + '>' + '<label class="form-check-label" for=' + (i+11) + '><img src="images/veryhappy.jpg></label></div><div class="form-check"><option class="form-check-option radio-button" type="radio" value="option2" id=' + (i+11) + '>' + '<label class="form-check-label" for=' + (i+11) + '><img src="images/happy.jpg></label></div><div class="form-check"><option class="form-check-option radio-button" type="radio" value="option3" id=' + (i+11) + '>' + '<label class="form-check-label" for=' + (i+11) + '><img src="images/normal.jpg></label></div><div class="form-check"><option class="form-check-option radio-button" type="radio" value="option4" id=' + (i+11) + '>' + '<label class="form-check-label" for=' + (i+11) + '><img src="images/sad.jpg></label></div><div class="form-check"><option class="form-check-option radio-button" type="radio" value="option5" id=' + (i+11) + '>' + '<label class="form-check-label" for=' + (i+11) + '><img src="images/verysad.jpg></label>' + '</div>');
     
     
-        $('#surveyLocation').append('<h3>' + (i+11) + '</h3>' + '<h4>' + altQuestions[1] + '</h4>' + '<img src="images/IMG_0995.png">' + '<div class="form-check"><input class="form-check-input" type="radio" value="option1" id=' + (i+11) + '<label class="form-check-label" for=' + (i+11) + '>Lawful Good</label></div><div class="form-check"><input class="form-check-input" type="radio" value="option2" id=' + (i+11) + '<label class="form-check-label" for=' + (i+11) + '>Neutral Good</label></div><div class="form-check"><input class="form-check-input" type="radio" value="option3" id=' + (i+11) + '<label class="form-check-label" for=' + (i+11) + '>Choatic Good</label></div>' + '<div class="form-check"><input class="form-check-input" type="radio" value="option4" id=' + (i+11) + '<label class="form-check-label" for=' + (i+11) + '>Lawful Neutral</label></div><div class="form-check"><input class="form-check-input" type="radio" value="option5" id=' + (i+11) + '<label class="form-check-label" for=' + (i+11) + '>True Neutral</label></div><div class="form-check"><input class="form-check-input" type="radio" value="option6" id=' + (i+11) + '<label class="form-check-label" for=' + (i+11) + '>Chaotic Neutral</label></div>' + '<div class="form-check"><input class="form-check-input" type="radio" value="option7" id=' + (i+11) + '<label class="form-check-label" for=' + (i+11) + '>Lawful Evil</label></div><div class="form-check"><input class="form-check-input" type="radio" value="option8" id=' + (i+11) + '<label class="form-check-label" for=' + (i+11) + '>Neutral Evil</label></div><div class="form-check"><input class="form-check-input" type="radio" value="option9" id=' + (i+11) + '<label class="form-check-label" for=' + (i+11) + '>Chaotic Evil</label></div>');
+        $('#surveyLocation').append('<h3>' + (i+11) + '</h3>' + '<h4>' + altQuestions[1] + '</h4>' + '<img src="images/IMG_0995.png">' + '<select class="choosen-select" id=' + (i+11) + '>' + '<option class="form-check-option" type="radio" value="1">Lawful Good</option>' + '<option class="form-check-option" type="radio" value="2">Neutral Good</option>' + '<option class="form-check-option" type="radio" value="3">Choatic Good</option>' + '<option class="form-check-option" type="radio" value="4">Lawful Neutral</option>' + '<option class="form-check-option" type="radio" value="5">True Neutral</option>' + '<option class="form-check-option" type="radio" value="6">Chaotic Neutral</option>' + '<option class="form-check-option" type="radio" value="7">Lawful Evil</option>' + '<option class="form-check-option" type="radio" value="8">Neutral Evil</option>' + '<option class="form-check-option" type="radio" value="9">Chaotic Evil</option>' + '</select>');
     
 };
 
@@ -54,7 +54,7 @@ $('#submitButton').on("click", function(event) {
             valid == false;
         }
 
-        $('.form-check-input').each( function() {
+        $('.form-check-option').each( function() {
             if ($(this).val() === "") {
                 valid == false;
             }
@@ -69,18 +69,18 @@ $('#submitButton').on("click", function(event) {
             "name": $("#name").val().trim(),
             "photo": $("#image").val().trim(),
             "answers": [
-                parseInt($("#1").val()),
-                parseInt($("#2").val()),
-                parseInt($("#3").val()),
-                parseInt($("#4").val()),
-                parseInt($("#5").val()),
-                parseInt($("#6").val()),
-                parseInt($("#7").val()),
-                parseInt($("#8").val()),
-                parseInt($("#9").val()),
-                parseInt($("#10").val()),
-                parseInt($("#11").val()),
-                parseInt($("#12").val())
+                $("#1").val(),
+                $("#2").val(),
+                $("#3").val(),
+                $("#4").val(),
+                $("#5").val(),
+                $("#6").val(),
+                $("#7").val(),
+                $("#8").val(),
+                $("#9").val(),
+                $("#10").val(),
+                $("#11").val(),
+
             ]
         };
 
