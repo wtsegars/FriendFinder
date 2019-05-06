@@ -36,7 +36,7 @@ for (let i = 0; i < 1; i++) {
     
 };
 
-$('#surveyLocation').append('<button type="submit" class="btn btn-primary" id="submitButton">Submit</button>');
+$('#surveyLocation').append('<button type="submit" data-toggle="modal" data-target="#myModal" class="btn btn-primary" id="submitButton">Submit</button>');
 
 const config = {
 	".chosen-select": {},
@@ -103,7 +103,7 @@ $('#submitButton').on("click", function(event) {
         $.post("/api/friends", formResults, function(data) {
             $("#friendNameDiv").html("<h2>" + data.name + "</h2>");
             $("#friendImg").attr("src", data.photo);
-            $("#myModal").modal("toggle");
+            //$("#myModal").modal("toggle");
         });
     }
     else {
