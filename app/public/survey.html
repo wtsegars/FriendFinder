@@ -1,65 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-    <title>Friend Finder Survey</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <title>Friend Finder Survey</title>
 </head>
+
 <body>
-    <div class="jumbotron-fluid">
-        <h1 class="display-4 text-center">Welcome to Friend Finder!</h1>
-        <h4 class="lead text-center">The best way to find your new best friend!</h4>
-    </div>
-    <div class="jumbotron-fluid">
-        <h2 class="display-4">How it works:</h2>
-        <p class="lead">In the areas where it requires you to fill out any information in a text box do so. The rest 
-            of these questions you will rate on a number scale from 1 -5, with 1 being the least like you and 5 being the 
-            most like you. All other questions will be standard multiple choice.
-        </p>
-    </div>
-    <br>
-    <div class="container" id="questionDiv">
-        <form>
-            <div class="form-group">
-                <label>Name</label>
-                <input type="text" class="form-control" id="name">
-            </div>
-            <div class="form-group">
-                <label>Link to an Image of Yourself</label>
-                <input type="text" class="form-control" id="image">
-            </div>
-            <div id="surveyLocation">
+  <div class="jumbotron-fluid">
+    <h1 class="display-4 text-center">Welcome to Friend Finder!</h1>
+    <h4 class="lead text-center">The best way to find your new best friend!</h4>
+  </div>
+  <div class="jumbotron-fluid">
+    <h2 class="display-4">How it works:</h2>
+    <p class="lead">In the areas where it requires you to fill out any information in a text box do so. The rest
+      of these questions you will rate on a number scale from 1 -5, with 1 being the least like you and 5 being
+      the
+      most like you. All other questions will be standard multiple choice.
+    </p>
+  </div>
+  <br>
+  <div class="container" id="questionDiv">
+    <form>
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" id="name">
+      </div>
+      <div class="form-group">
+        <label>Link to an Image of Yourself</label>
+        <input type="text" class="form-control" id="image">
+      </div>
+      <div id="surveyLocation">
 
-            </div>
-        </form>
-    </div>
-    <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h2 class="modal-title">Your Top Match(es):</h2>
-                </div>
-                <div class="modal-body">
-                    <div id="friendNameDiv"></div>
-                    <img id="friendImg" class="img img-responsive" alt="">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
+      </div>
+    </form>
+  </div>
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title">Your Top Match:</h2>
         </div>
+        <div class="modal-body">
+          <div id="friendNameDiv"></div>
+          <img id="friendImg" class="img img-responsive" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
+  </div>
 
-<script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script> 
-<script type="text/javascript" src="js/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/app.js"></script>
 </body>
+
 </html>
