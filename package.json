@@ -1,0 +1,25 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "This is a website called Friend Finder that matches a user to another a person that would be most likely to be friends with them based on the answers that they give in a survey. What the user does is that they will answer a series of questions of statement that they feel would describe them as a person on a scale from 1 to 5 (1 being the least like them and 5 being the most like them) along with a question that askes about their alignment. After the user hits the 'submit' button at the bottom of the page, they will be given the name and picture of a person that most closely matches them in terms of how close their answers are on the forms. This particular site runs using express, jQuery, fs, and several other components.",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wtsegars/FriendFinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wtsegars/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/wtsegars/FriendFinder#readme"
+}
